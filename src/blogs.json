@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Cryptocurrency Explained With Pros and Cons for Investment",
+    "description": "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    "image": "blogimg.png",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Another Blog Post",
+    "description": "Short description for the blog post.",
+    "image": "blogimg.png",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "New Blog Post",
+    "description": "Short description for the blog post.",
+    "image": "blogimg.png",
+    "featured": false
+  }
+]

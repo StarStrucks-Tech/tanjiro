@@ -4,20 +4,58 @@
     "title": "Cryptocurrency Explained With Pros and Cons for Investment",
     "description": "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
     "image": "blogimg.png",
-    "featured": true
+    "featured": true,
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
   },
   {
     "id": 2,
-    "title": "Another Blog Post",
+    "title": "Blog post 2",
     "description": "Short description for the blog post.",
     "image": "blogimg.png",
-    "featured": false
+    "featured": false,
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
   },
   {
     "id": 3,
-    "title": "New Blog Post",
+    "title": "Blog post 3",
     "description": "Short description for the blog post.",
     "image": "blogimg.png",
-    "featured": false
+    "featured": false,
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
+  },
+  {
+    "id": 4,
+    "title": "Blog Post 4",
+    "description": "Short description for the blog post and other things.",
+    "image": "blogimg.png",
+    "featured": false,
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
+  },
+  {
+    "id": 5,
+    "title": "New Blog Post 5",
+    "description": "Short description for the blog post.",
+    "image": "blogimg2.jpeg",
+    "featured": false,
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
+  },
+  {
+    "id": 6,
+    "title": "The Basics about Cryptocurrency",
+    "description": "Lorem ipsum dolor sit amet...",
+    "image": "blogimg2.jpeg",
+    "author": "Alex Turner",
+    "date": "August 2, 2021",
+    "category": "PRODUCTS"
   }
 ]

@@ -2,8 +2,30 @@ import React, { useState, useEffect } from "react";
 import "../components/Blogs.css";
 import blogsData from "../blogs.json";
 
-const BlogSection = () => {
-  const [blogs, setBlogs] = useState([]);
+/**
+ * @interface Blog
+ * @description Represents the structure of a blog post
+ */
+
+interface Blog {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  author: string;
+  date: string;
+  category?: string;
+  featured?: boolean;
+}
+
+/**
+ * @component BlogSection
+ * @description Main component that renders the entire blog section
+ * @returns {JSX.Element} The rendered BlogSection component
+ */
+
+const BlogSection: React.FC = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
 
   useEffect(() => {
     setBlogs(blogsData);
@@ -16,7 +38,6 @@ const BlogSection = () => {
       </div>
       <div className="blogs-container">
         {blogs.length > 0 && <FeaturedBlogPost blog={blogs[0]} />}
-        {/*The first blog is the latest one and considered as featured one*/}
         <div className="small-blogs-grid">
           {blogs.slice(1).map((blog) => (
             <SmallBlogPost key={blog.id} blog={blog} />
@@ -26,18 +47,24 @@ const BlogSection = () => {
     </section>
   );
 };
-/*
- * @component
- * @param {Object} props
- * @param {Object} props.blog - The blog post data object
- * @param {string} props.blog.title - The title of the blog post
- * @param {string} props.blog.description - A brief description of the blog post
- * @param {string} props.blog.image - The filename of the blog post's image
- * @param {string} props.blog.author - The name of the blog post's author
- * @param {string} props.blog.date - The publication date of the blog post
+
+/**
+ * @interface BlogPostProps
+ * @description Props for blog post components
  */
 
-const FeaturedBlogPost = ({ blog }) => {
+interface BlogPostProps {
+  blog: Blog;
+}
+
+/**
+ * @component FeaturedBlogPost
+ * @description Renders a featured blog post
+ * @param {BlogPostProps} props - The props for the component
+ * @returns {JSX.Element} The rendered FeaturedBlogPost component
+ */
+
+const FeaturedBlogPost: React.FC<BlogPostProps> = ({ blog }) => {
   return (
     <div className="featured-blog-post">
       <div className="post-content">
@@ -56,7 +83,14 @@ const FeaturedBlogPost = ({ blog }) => {
   );
 };
 
-const SmallBlogPost = ({ blog }) => {
+/**
+ * @component SmallBlogPost
+ * @description Renders a small blog post
+ * @param {BlogPostProps} props - The props for the component
+ * @returns {JSX.Element} The rendered SmallBlogPost component
+ */
+
+const SmallBlogPost: React.FC<BlogPostProps> = ({ blog }) => {
   return (
     <div className="small-blog-post">
       <img src={require(`../assets/${blog.image}`)} alt={blog.title} />

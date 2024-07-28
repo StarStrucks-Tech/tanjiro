@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
-import BlogSection from "./components/Blog";
+import BlogSection from "./components/Blog.tsx";
 function App() {
   return <BlogSection />;
 }
